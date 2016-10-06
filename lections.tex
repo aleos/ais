@@ -1,0 +1,98 @@
+% !TEX encoding = UTF-8 Unicode
+%% Лекции по Системам искусственного интеллекта. Охтилев М.Ю. (oxt@mail.ru)
+\documentclass[pdftex,a4paper,12pt,%
+%draft% «Черновой» режим "--- пометка overfull и underfull
+]{report}
+% кодировка документа
+%\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+% поддержка ссылок в pdf
+\usepackage[pdftex, unicode]{hyperref}
+% расстановка русских переносов, настройки для русских текстов
+\usepackage[russian]{babel}
+\usepackage{misccorr}
+% максимальная разрежённость текста
+%\tolerance=300
+% поиск по русским словам в pdf
+\usepackage{cmap}
+% вставка иллюстраций
+\usepackage[pdftex]{graphicx}
+\graphicspath{{pic/}} % путь к иллюстрациям
+% русские буквы в формулах
+\usepackage{mathtext}
+% выбор внутренней кодировки для русских букв в формулах
+\usepackage[T2A]{fontenc}
+% дополнительные возможности в формулах, в т.ч. правильная расстановка скобок
+\usepackage{amsmath,amssymb}
+% \with - логическое "и" с правильными отступами
+\usepackage{cmll} % need texlive-fonts-extra
+% изменённые каллиграфические буквы
+%\usepackage{calrsfs}
+% дополнительные шрифты с заменой \mathcal
+\usepackage[mathcal]{euscript}
+% дополнительные текстовые символы
+\usepackage{textcomp}
+% Отступ красной строки в первом абзаце
+\usepackage{indentfirst}
+% Более полное заполнение листа 
+\usepackage{fullpage}
+% дополнительные возможности для tabular 
+\usepackage{array}
+% \topcaption для надписей над таблицами
+\usepackage{topcapt}
+
+%\usepackage[pdftex, unicode]{hyperref}
+\hypersetup{
+    backref,
+    bookmarks,
+    bookmarksnumbered,
+    colorlinks,
+    pdfborder={0 0 0}, % ссылки без рамок
+    pdftitle={Лекции по СИИ},
+    pdfsubject={Лекции по предмету «Системы искусственного интеллекта»},
+    pdfauthor={Охтилев М.Ю.},
+    pdfkeywords={лекции, СИИ}
+}
+
+\usepackage{amsthm} % Теоремы, определения, замечания.
+\theoremstyle{plain}
+\newtheorem*{theorem}{Теорема}
+\newtheorem*{conseq}{Следствие} % consequence of the theorem
+\theoremstyle{definition}
+\newtheorem*{defin}{Определение}
+\newtheorem*{ex}{Пример}
+\theoremstyle{remark}
+\newtheorem*{rem}{Замечание}
+
+\title{Системы искусственного интеллекта}
+\author{Михаил Юрьевич Охтилев\thanks{e-mail: oxt@mail.ru}}
+\date{\today}
+
+\includeonly{
+ch1,
+ch2,
+ch3,
+appendix,
+bibliography,
+}
+
+%\pagestyle{myheadings} 
+%\headsep=.5in
+%\renewcommand{\sectionmark}[1]{\markboth{}{\thesection\hspace{1em}#1}}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{ch1}
+
+\include{ch2}
+
+\include{ch3}
+\include{appendix}
+\include{bibliography}
+
+\end{document} 
